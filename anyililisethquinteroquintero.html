@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anyili Liseth Quintero Quintero | Portafolio Profesional</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            500: '#0284c7', // Sky Blue
+                            600: '#0369a1',
+                            700: '#075985',
+                            800: '#0c4a6e',
+                            900: '#0f172a', // Slate base
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom animations and styling scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300 font-sans antialiased">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-800/50" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo / Name -->
+                <div class="flex-shrink-0 flex flex-col">
+                    <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
+                        Anyili L. Quintero
+                    </span>
+                    <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 tracking-wider uppercase">
+                        Asistente Administrativo
+                    </span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-sm font-medium hover:text-brand-500 transition-colors">Inicio</a>
+                    <a href="#perfil" class="text-sm font-medium hover:text-brand-500 transition-colors">Sobre Mí</a>
+                    <a href="#habilidades" class="text-sm font-medium hover:text-brand-500 transition-colors">Habilidades</a>
+                    <a href="#proyectos" class="text-sm font-medium hover:text-brand-500 transition-colors">Proyectos & Demo</a>
+                    <a href="#educacion" class="text-sm font-medium hover:text-brand-500 transition-colors">Educación</a>
+                    <a href="#contacto" class="text-sm font-medium hover:text-brand-500 transition-colors">Contacto</a>
+                    
+                    <!-- Dark/Light Mode Switcher -->
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Cambiar tema">
+                        <i data-lucide="sun" class="hidden dark:block w-5 h-5 text-amber-400"></i>
+                        <i data-lucide="moon" class="block dark:hidden w-5 h-5 text-slate-600"></i>
+                    </button>
+                </nav>
+
+                <!-- Mobile Action Buttons -->
+                <div class="flex md:hidden items-center gap-4">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Cambiar tema">
+                        <i data-lucide="sun" class="hidden dark:block w-5 h-5 text-amber-400"></i>
+                        <i data-lucide="moon" class="block dark:hidden w-5 h-5 text-slate-600"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Abrir menú">
+                        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 transition-all duration-300">
+            <div class="px-4 pt-2 pb-6 space-y-3 shadow-lg">
+                <a href="#inicio" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Inicio</a>
+                <a href="#perfil" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Sobre Mí</a>
+                <a href="#habilidades" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Habilidades</a>
+                <a href="#proyectos" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Proyectos & Demo</a>
+                <a href="#educacion" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Educación</a>
+                <a href="#contacto" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative min-h-screen pt-28 flex items-center justify-center overflow-hidden bg-gradient-to-b from-brand-50/50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+        <!-- Abstract Background Shapes -->
+        <div class="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-brand-100/20 to-transparent dark:from-brand-900/10 dark:to-transparent rounded-l-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-emerald-100/20 dark:bg-emerald-900/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Area -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-100 dark:bg-brand-900/50 border border-brand-200 dark:border-brand-800 text-brand-700 dark:text-brand-300">
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        <span class="text-xs font-semibold uppercase tracking-wider">Estudiante Activa • Tercer Semestre</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                        Hola, soy <br>
+                        <span class="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">Anyili Liseth Quintero</span>
+                    </h1>
+
+                    <h2 class="text-xl sm:text-2xl font-semibold text-slate-600 dark:text-slate-300">
+                        Asistente Administrativo & Desarrolladora Web en Formación
+                    </h2>
+
+                    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0">
+                        Apasionada por la eficiencia organizacional y la optimización de procesos mediante tecnología. 30 años de edad, combinando responsabilidad, madurez y adaptabilidad en la gestión administrativa digital.
+                    </p>
+
+                    <!-- Interactive CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#contacto" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-medium shadow-lg shadow-brand-500/20 hover:shadow-brand-500/30 hover:-translate-y-0.5 transition-all">
+                            <span>Contactar Conmigo</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#proyectos" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 font-medium hover:-translate-y-0.5 transition-all">
+                            <span>Ver Proyectos</span>
+                            <i data-lucide="layout" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Quick stats / Highlights -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-200/60 dark:border-slate-800/60 max-w-md mx-auto lg:mx-0">
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl font-bold text-brand-600 dark:text-brand-400">30</span>
+                            <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Años de edad</span>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl font-bold text-brand-600 dark:text-brand-400">3°</span>
+                            <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Semestre Académico</span>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <span class="block text-2xl font-bold text-brand-600 dark:text-brand-400">100%</span>
+                            <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Comprometida</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Photo Card/Mockup Area -->
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 animate-float">
+                        <!-- Background Gradient Ring -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-brand-500 to-emerald-400 rounded-3xl rotate-6 opacity-30 blur-lg"></div>
+                        <!-- Profile Card Container -->
+                        <div class="absolute inset-0 bg-white dark:bg-slate-800 rounded-3xl shadow-xl overflow-hidden border border-slate-200/50 dark:border-slate-700/50 p-4 flex flex-col justify-between">
+                            <!-- Header Decor -->
+                            <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-700/50 pb-3">
+                                <div class="flex items-center gap-1.5">
+                                    <span class="w-3 h-3 rounded-full bg-rose-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+                                    <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+                                </div>
+                                <span class="text-xs font-semibold text-slate-400">AnyiliQuintero.pdf</span>
+                            </div>
+
+                            <!-- Photo Placeholder with interactive character card -->
+                            <div class="flex-1 flex flex-col items-center justify-center py-6 text-center space-y-4">
+                                <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-tr from-brand-100 to-brand-500 flex items-center justify-center text-white font-extrabold text-3xl shadow-md border-4 border-white dark:border-slate-800">
+                                    AQ
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg text-slate-800 dark:text-white">Anyili Liseth Quintero</h3>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">Asistente Administrativo Integral</p>
+                                </div>
+                                
+                                <!-- Decorative Skills Pills inside card -->
+                                <div class="flex flex-wrap gap-1.5 justify-center max-w-xs">
+                                    <span class="px-2 py-0.5 text-[10px] font-semibold bg-brand-50 dark:bg-brand-950 text-brand-600 dark:text-brand-400 rounded-full border border-brand-100 dark:border-brand-900">Excel Avanzado</span>
+                                    <span class="px-2 py-0.5 text-[10px] font-semibold bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 rounded-full border border-emerald-100 dark:border-emerald-900">HTML5/CSS3</span>
+                                    <span class="px-2 py-0.5 text-[10px] font-semibold bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 rounded-full border border-indigo-100 dark:border-indigo-900">Word</span>
+                                </div>
+                            </div>
+
+                            <!-- Footer Stats inside Card -->
+                            <div class="bg-slate-50 dark:bg-slate-900/50 rounded-xl p-3 flex justify-around text-center border border-slate-100 dark:border-slate-700/20">
+                                <div>
+                                    <span class="block text-xs font-semibold text-slate-400">Idiomas</span>
+                                    <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Español</span>
+                                </div>
+                                <div class="border-l border-slate-200 dark:border-slate-700"></div>
+                                <div>
+                                    <span class="block text-xs font-semibold text-slate-400">Ubicación</span>
+                                    <span class="text-xs font-bold text-slate-700 dark:text-slate-300">Colombia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFILE SECTION (SOBRE MÍ) -->
+    <section id="perfil" class="py-24 bg-white dark:bg-slate-900 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Trayectoria & Propósito</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Sobre Mi Perfil Profesional</h2>
+                <div class="h-1 w-20 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <!-- Text Narrative -->
+                <div class="space-y-6 text-justify">
+                    <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-light">
+                        Soy una persona comprometida con mi crecimiento personal y profesional. A mis <strong class="font-semibold text-brand-600 dark:text-brand-400">30 años de edad</strong>, he entendido que la mejor manera de enfrentar el dinámico entorno laboral es fusionar habilidades organizacionales clásicas con el conocimiento tecnológico moderno.
+                    </p>
+                    <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-light">
+                        Actualmente me encuentro cursando el <strong class="font-semibold text-brand-600 dark:text-brand-400">tercer semestre de mi formación académica</strong>, lo cual me dota de bases actualizadas y una mentalidad proactiva para el aprendizaje constante. Mi meta es consolidarme como <strong class="font-semibold text-brand-600 dark:text-brand-400">Asistente Administrativo</strong>, aportando un valor diferencial único: la capacidad de digitalizar y optimizar procesos rutinarios gracias a mi manejo del ecosistema web.
+                    </p>
+                    <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-light">
+                        Me distingo por mi alto sentido de la organización, precisión en el manejo de datos y herramientas de oficina como Word y Excel, además de poseer competencias en HTML, CSS y JavaScript para dar soporte en entornos digitales e interactuar eficazmente con equipos de soporte técnico.
+                    </p>
+                    
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <div class="flex items-center gap-3 bg-slate-50 dark:bg-slate-800 p-3 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+                            <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-500">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-800 dark:text-white">Confianza y Ética</h4>
+                                <p class="text-xs text-slate-500">Compromiso en cada tarea</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 bg-slate-50 dark:bg-slate-800 p-3 rounded-xl border border-slate-200/50 dark:border-slate-700/50">
+                            <div class="p-2 rounded-lg bg-indigo-500/10 text-indigo-500">
+                                <i data-lucide="zap" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-800 dark:text-white">Adaptabilidad</h4>
+                                <p class="text-xs text-slate-500">Rápido aprendizaje continuo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Strengths / Decorative Accordion -->
+                <div class="bg-gradient-to-br from-slate-50 to-brand-50/30 dark:from-slate-800 dark:to-slate-900/50 rounded-2xl p-6 sm:p-8 border border-slate-200/60 dark:border-slate-800/60 space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <i data-lucide="sparkles" class="text-brand-500 w-5 h-5"></i>
+                        Atributos de Valor en la Oficina
+                    </h3>
+
+                    <div class="space-y-4">
+                        <!-- Card 1 -->
+                        <div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-200/50 dark:border-slate-700/50">
+                            <div class="flex items-start gap-3">
+                                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold text-sm">01</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 dark:text-white text-base">Habilidades Ofimáticas Robustas</h4>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Generación de informes estructurados en Word, automatización de hojas de cálculo y manipulación de datos en Excel con precisión matemática.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-200/50 dark:border-slate-700/50">
+                            <div class="flex items-start gap-3">
+                                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold text-sm">02</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 dark:text-white text-base">Perfil Híbrido Tecnológico</h4>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">A diferencia del perfil administrativo común, entiendo y modifico código estructurado (HTML, CSS, JS), permitiendo mantener y actualizar la web de la empresa.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="bg-white dark:bg-slate-800 p-4 rounded-xl shadow-sm border border-slate-200/50 dark:border-slate-700/50">
+                            <div class="flex items-start gap-3">
+                                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold text-sm">03</span>
+                                <div>
+                                    <h4 class="font-bold text-slate-800 dark:text-white text-base">Trabajo Colaborativo Directo</h4>
+                                    <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Capacidad innata para escuchar, adaptarme y resolver problemas complejos en equipo bajo entornos exigentes y con plazos fijos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="habilidades" class="py-24 bg-slate-50 dark:bg-slate-950 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">¿Qué puedo ofrecer?</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Mis Habilidades & Destrezas</h2>
+                <div class="h-1 w-20 bg-brand-500 mx-auto rounded-full"></div>
+                <p class="text-slate-600 dark:text-slate-400">Una vista detallada de las habilidades técnicas, de oficina y aptitudes blandas preparadas para integrarse en su flujo empresarial.</p>
+            </div>
+
+            <!-- Skills Tab Filter -->
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex bg-white dark:bg-slate-900 p-1.5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm gap-2">
+                    <button onclick="filterSkills('all')" class="skill-tab-btn active px-4 py-2 text-xs sm:text-sm font-medium rounded-lg bg-brand-600 text-white transition-all">
+                        Todas
+                    </button>
+                    <button onclick="filterSkills('tech')" class="skill-tab-btn px-4 py-2 text-xs sm:text-sm font-medium rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+                        Tecnología / Web
+                    </button>
+                    <button onclick="filterSkills('office')" class="skill-tab-btn px-4 py-2 text-xs sm:text-sm font-medium rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+                        Oficina / Admin
+                    </button>
+                    <button onclick="filterSkills('soft')" class="skill-tab-btn px-4 py-2 text-xs sm:text-sm font-medium rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+                        Habilidades Blandas
+                    </button>
+                </div>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="skills-grid">
+                
+                <!-- Skill Card: Excel (Office) -->
+                <div class="skill-card bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 shadow-sm hover:shadow-md transition-all duration-300" data-category="office">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-emerald-100 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 rounded-xl">
+                            <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-bold px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950 text-emerald-600 rounded-full border border-emerald-100 dark:border-emerald-900">Oficina</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Manejo de Microsoft Excel</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Uso estructurado para administración de bases de datos, fórmulas condicionales, resúmenes, ordenamiento y macros básicas de productividad.</p>
+                    <div>
+                        <div class="flex justify-between text-xs font-semibold mb-1 text-slate-600 dark:text-slate-300">
+                            <span>Nivel de Dominio</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-emerald-500 rounded-full transition-all duration-1000" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card: Word (Office) -->
+                <div class="skill-card bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 shadow-sm hover:shadow-md transition-all duration-300" data-category="office">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-blue-100 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 rounded-xl">
+                            <i data-lucide="file-text" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-bold px-2.5 py-1 bg-blue-50 dark:bg-blue-950 text-blue-600 rounded-full border border-blue-100 dark:border-blue-900">Oficina</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Manejo de Microsoft Word</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Creación y formateo avanzado de actas de reunión, propuestas formales de negocios, correspondencia masiva, informes y políticas corporativas estructuradas.</p>
+                    <div>
+                        <div class="flex justify-between text-xs font-semibold mb-1 text-slate-600 dark:text-slate-300">
+                            <span>Nivel de Dominio</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-blue-500 rounded-full transition-all duration-1000" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card: HTML (Tech) -->
+                <div class="skill-card bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 shadow-sm hover:shadow-md transition-all duration-300" data-category="tech">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-orange-100 dark:bg-orange-950/50 text-orange-600 dark:text-orange-400 rounded-xl">
+                            <i data-lucide="code-2" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-bold px-2.5 py-1 bg-orange-50 dark:bg-orange-950 text-orange-600 rounded-full border border-orange-100 dark:border-orange-900">Tecnología</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Estructuración HTML5</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Creación de documentos web semánticos, legibles por buscadores y optimizados estructuralmente, facilitando el mantenimiento y edición del sitio web oficial.</p>
+                    <div>
+                        <div class="flex justify-between text-xs font-semibold mb-1 text-slate-600 dark:text-slate-300">
+                            <span>Nivel de Dominio</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-orange-500 rounded-full transition-all duration-1000" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card: CSS (Tech) -->
+                <div class="skill-card bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 shadow-sm hover:shadow-md transition-all duration-300" data-category="tech">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-brand-50 dark:bg-brand-950/50 text-brand-600 dark:text-brand-400 rounded-xl">
+                            <i data-lucide="palette" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-bold px-2.5 py-1 bg-brand-50 dark:bg-brand-950 text-brand-600 rounded-full border border-brand-100 dark:border-brand-900">Tecnología</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Estilización CSS3 & Responsive</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Maquetación visual moderna, manejo de hojas de estilo avanzadas, adaptación móvil (Responsive Design) y uso de frameworks estéticos de vanguardia.</p>
+                    <div>
+                        <div class="flex justify-between text-xs font-semibold mb-1 text-slate-600 dark:text-slate-300">
+                            <span>Nivel de Dominio</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-500 rounded-full transition-all duration-1000" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card: JavaScript (Tech) -->
+                <div class="skill-card bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 shadow-sm hover:shadow-md transition-all duration-300" data-category="tech">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-amber-100 dark:bg-amber-950/50 text-amber-600 dark:text-amber-400 rounded-xl">
+                            <i data-lucide="terminal" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-bold px-2.5 py-1 bg-amber-50 dark:bg-amber-950 text-amber-600 rounded-full border border-amber-100 dark:border-amber-900">Tecnología</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Programación JavaScript</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Agregar dinamismo al lado del cliente: validaciones de formularios robustas, controladores dinámicos, consumo interactivo de elementos de interfaz e integración de lógica básica.</p>
+                    <div>
+                        <div class="flex justify-between text-xs font-semibold mb-1 text-slate-600 dark:text-slate-300">
+                            <span>Nivel de Dominio</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-amber-500 rounded-full transition-all duration-1000" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card: Blandas (Soft) -->
+                <div class="skill-card bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 shadow-sm hover:shadow-md transition-all duration-300" data-category="soft">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-3 bg-purple-100 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 rounded-xl">
+                            <i data-lucide="users" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xs font-bold px-2.5 py-1 bg-purple-50 dark:bg-purple-950 text-purple-600 rounded-full border border-purple-100 dark:border-purple-900">Aptitud</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Trabajo en Equipo & Adaptabilidad</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Habilidad innata para integrarme de manera constructiva, adaptando ritmos laborales con empatía, facilitando la cohesión colectiva y resolviendo contingencias diarias.</p>
+                    <div>
+                        <div class="flex justify-between text-xs font-semibold mb-1 text-slate-600 dark:text-slate-300">
+                            <span>Aptitud Social</span>
+                            <span>Excelente</span>
+                        </div>
+                        <div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-purple-500 rounded-full transition-all duration-1000" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DEMO & PROJECTS SECTION -->
+    <section id="proyectos" class="py-24 bg-white dark:bg-slate-900 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Demostración de Competencia</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Proyectos & Demostración Interactiva</h2>
+                <div class="h-1 w-20 bg-brand-500 mx-auto rounded-full"></div>
+                <p class="text-slate-600 dark:text-slate-400">¿Cómo se ve la fusión de mi conocimiento administrativo con desarrollo web? He diseñado y programado este organizador de tareas administrativo integrado para mostrar mis habilidades en tiempo real.</p>
+            </div>
+
+            <!-- Interactive App Widget Container -->
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl overflow-hidden max-w-4xl mx-auto">
+                <!-- Bar header window style -->
+                <div class="bg-slate-200/60 dark:bg-slate-900 p-4 border-b border-slate-300/50 dark:border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3.5 h-3.5 rounded-full bg-red-400"></div>
+                        <div class="w-3.5 h-3.5 rounded-full bg-yellow-400"></div>
+                        <div class="w-3.5 h-3.5 rounded-full bg-green-400"></div>
+                        <span class="ml-2 text-xs font-bold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+                            <i data-lucide="cog" class="w-3.5 h-3.5 animate-spin"></i>
+                            Aplicación Interactiva: Agenda Administrativa de Oficina
+                        </span>
+                    </div>
+                    <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-brand-500 text-white">Anyili JS Engine v1.1</span>
+                </div>
+
+                <div class="p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 gap-8">
+                    <!-- Column 1: Control/Form Panel -->
+                    <div class="md:col-span-5 space-y-4">
+                        <h4 class="text-sm font-bold text-slate-800 dark:text-white uppercase tracking-wider">Añadir Actividad Diaria</h4>
+                        <div class="space-y-3">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-600 dark:text-slate-400 mb-1">Nombre de la Tarea</label>
+                                <input type="text" id="task-title" placeholder="Ej: Redactar acta de junta directiva" class="w-full text-sm px-3.5 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none transition-all">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-slate-600 dark:text-slate-400 mb-1">Área / Categoría</label>
+                                <select id="task-category" class="w-full text-sm px-3.5 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none transition-all">
+                                    <option value="Administración">Administración General</option>
+                                    <option value="Archivo">Archivo e Inventario</option>
+                                    <option value="Finanzas">Finanzas / Facturas</option>
+                                    <option value="Web/Soporte">Web / Soporte Digital</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-slate-600 dark:text-slate-400 mb-1">Nivel de Prioridad</label>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <label class="flex items-center justify-center p-2 rounded-lg border border-slate-200 dark:border-slate-700 cursor-pointer text-xs font-medium hover:bg-slate-100 dark:hover:bg-slate-900 peer-checked:bg-red-500">
+                                        <input type="radio" name="task-priority" value="Alta" class="sr-only" checked>
+                                        <span class="text-red-500">Alta</span>
+                                    </label>
+                                    <label class="flex items-center justify-center p-2 rounded-lg border border-slate-200 dark:border-slate-700 cursor-pointer text-xs font-medium hover:bg-slate-100 dark:hover:bg-slate-900">
+                                        <input type="radio" name="task-priority" value="Media" class="sr-only">
+                                        <span class="text-amber-500">Media</span>
+                                    </label>
+                                    <label class="flex items-center justify-center p-2 rounded-lg border border-slate-200 dark:border-slate-700 cursor-pointer text-xs font-medium hover:bg-slate-100 dark:hover:bg-slate-900">
+                                        <input type="radio" name="task-priority" value="Baja" class="sr-only">
+                                        <span class="text-emerald-500">Baja</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button onclick="addNewTask()" class="w-full py-3 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm flex items-center justify-center gap-2 transition-all shadow-md hover:shadow-lg">
+                                <i data-lucide="plus" class="w-4 h-4"></i>
+                                Agregar a la Lista
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Interactive Table Grid output -->
+                    <div class="md:col-span-7 flex flex-col justify-between h-full space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-sm font-bold text-slate-800 dark:text-white uppercase tracking-wider">Actividades Programadas</h4>
+                            <span id="task-counter" class="text-xs font-semibold px-2 py-0.5 rounded-md bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300">Cargando tareas...</span>
+                        </div>
+
+                        <!-- Tasks Scroll Container -->
+                        <div class="flex-1 overflow-y-auto max-h-60 space-y-2.5 pr-1 border-t border-b border-slate-200 dark:border-slate-700 py-3" id="tasks-container">
+                            <!-- Tasks injected dynamically via JS -->
+                        </div>
+
+                        <!-- Data Export / Action Panel simulating real workspace automation -->
+                        <div class="flex items-center justify-between gap-3 pt-2">
+                            <span class="text-xs text-slate-500">Demuestra persistencia local (localStorage)</span>
+                            <button onclick="downloadAgenda()" class="px-3.5 py-2 text-xs font-semibold rounded-lg bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-600 transition-all flex items-center gap-1.5">
+                                <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                                Descargar Reporte (.TXT)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="educacion" class="py-24 bg-slate-50 dark:bg-slate-950 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Preparación de Futuro</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Formación Académica & Estudios</h2>
+                <div class="h-1 w-20 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Education Timeline -->
+            <div class="max-w-4xl mx-auto relative">
+                <!-- Timeline vertical line decor -->
+                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-slate-200 dark:bg-slate-800"></div>
+
+                <div class="space-y-12">
+                    <!-- Timeline Item 1: Actual studies -->
+                    <div class="relative flex flex-col md:flex-row items-start md:items-center">
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-brand-500 border-4 border-white dark:border-slate-900 transform -translate-x-1.5 md:-translate-x-2 z-10 shadow-md"></div>
+                        
+                        <div class="w-full md:w-1/2 md:pr-12 md:text-right pl-10 md:pl-0">
+                            <span class="inline-block px-3 py-1 bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 text-xs font-bold rounded-full mb-2">2025 - Presente</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Formación Profesional (Cursando 3° Semestre)</h3>
+                            <p class="text-sm text-brand-600 dark:text-brand-400 font-medium mt-1">Estudiante Regular de Pregrado</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Enfoque centrado en la gestión por procesos, toma de decisiones administrativas, desarrollo de herramientas lógicas y diseño de soluciones eficientes de oficina.</p>
+                        </div>
+                        <div class="hidden md:block w-1/2"></div>
+                    </div>
+
+                    <!-- Timeline Item 2: Focus Admin assistant -->
+                    <div class="relative flex flex-col md:flex-row-reverse items-start md:items-center">
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-emerald-500 border-4 border-white dark:border-slate-900 transform -translate-x-1.5 md:-translate-x-2 z-10 shadow-md"></div>
+                        
+                        <div class="w-full md:w-1/2 md:pl-12 pl-10">
+                            <span class="inline-block px-3 py-1 bg-emerald-100 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 text-xs font-bold rounded-full mb-2">Especialización & Práctica</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Asistente Administrativo Integral</h3>
+                            <p class="text-sm text-emerald-600 dark:text-emerald-400 font-medium mt-1">Línea de Formación Orientada a Resultados</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Capacidades perfeccionadas en gestión y organización documental, diseño de reportes gerenciales, control y seguimiento de presupuestos de área e inventariado digital.</p>
+                        </div>
+                        <div class="hidden md:block w-1/2"></div>
+                    </div>
+
+                    <!-- Timeline Item 3: Auto-didactic development -->
+                    <div class="relative flex flex-col md:flex-row items-start md:items-center">
+                        <div class="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-amber-500 border-4 border-white dark:border-slate-900 transform -translate-x-1.5 md:-translate-x-2 z-10 shadow-md"></div>
+                        
+                        <div class="w-full md:w-1/2 md:pr-12 md:text-right pl-10 md:pl-0">
+                            <span class="inline-block px-3 py-1 bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 text-xs font-bold rounded-full mb-2">Formación Complementaria</span>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Desarrollo Web Frontend</h3>
+                            <p class="text-sm text-amber-600 dark:text-amber-400 font-medium mt-1">Autodidacta & Talleres Tecnológicos</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Adquisición y perfeccionamiento de habilidades en programación para la web (HTML5, CSS3 y JavaScript moderno), construyendo proyectos prácticos y automatizando flujos de trabajo.</p>
+                        </div>
+                        <div class="hidden md:block w-1/2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contacto" class="py-24 bg-white dark:bg-slate-900 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-sm font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Canal Directo</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Iniciemos una Conversación</h2>
+                <div class="h-1 w-20 bg-brand-500 mx-auto rounded-full"></div>
+                <p class="text-slate-600 dark:text-slate-400">¿Está buscando un perfil administrativo sólido con alta visión tecnológica para su equipo? Estoy lista para incorporarme de inmediato. Escríbame directamente.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch max-w-5xl mx-auto">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 bg-gradient-to-br from-brand-600 to-brand-800 text-white rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-xl">
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Datos de Contacto</h3>
+                            <p class="text-slate-200 text-sm">Contáctame por estos medios o rellena el formulario y responderé en un lapso menor de 24 horas laborables.</p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Direct Contact details -->
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-brand-200 font-semibold uppercase">Correo Electrónico</span>
+                                    <a href="mailto:anyiliquintero@example.com" class="text-sm font-semibold hover:underline">anyili.quintero@hotmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-brand-200 font-semibold uppercase">Ubicación Actual</span>
+                                    <span class="text-sm font-semibold">Colombia</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-brand-200 font-semibold uppercase">LinkedIn</span>
+                                    <span class="text-sm font-semibold">Anyili Quintero</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 border-t border-white/10 text-xs text-brand-200 flex items-center gap-2">
+                        <i data-lucide="clock" class="w-4 h-4"></i>
+                        <span>Disponibilidad inmediata para vacantes locales o remotas.</span>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7 bg-slate-50 dark:bg-slate-800 p-8 sm:p-10 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 flex flex-col justify-between">
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Nombre Completo</label>
+                                <input type="text" required id="form-name" placeholder="Ej: Carlos Mendoza" class="w-full text-sm px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Empresa</label>
+                                <input type="text" id="form-company" placeholder="Ej: Tech Solutions S.A." class="w-full text-sm px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none transition-all">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Correo Electrónico Corporativo</label>
+                            <input type="email" required id="form-email" placeholder="ejemplo@empresa.com" class="w-full text-sm px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none transition-all">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1.5 uppercase tracking-wider">Mensaje / Requerimiento</label>
+                            <textarea required id="form-message" rows="4" placeholder="Estimada Anyili, revisamos tu portafolio y nos interesa tu perfil para una entrevista corporativa..." class="w-full text-sm px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-white focus:ring-2 focus:ring-brand-500 outline-none transition-all resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm tracking-wide flex items-center justify-center gap-2 shadow-lg shadow-brand-500/10 hover:shadow-brand-500/20 hover:-translate-y-0.5 transition-all">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS TOAST/MODAL DIALOG (No alerts allowed) -->
+    <div id="toast-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-slate-900/40 backdrop-blur-sm p-4">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-sm w-full p-6 text-center shadow-2xl border border-slate-100 dark:border-slate-700 animate-float">
+            <div class="w-16 h-16 bg-emerald-100 dark:bg-emerald-950/50 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i data-lucide="check-circle" class="w-10 h-10"></i>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2" id="modal-title">¡Mensaje Recibido!</h4>
+            <p class="text-slate-500 dark:text-slate-400 text-sm mb-6" id="modal-description">Tu mensaje ha sido enviado correctamente de forma simulada. Anyili se comunicará pronto.</p>
+            <button onclick="closeModal()" class="w-full py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm transition-all shadow-md">
+                Entendido
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800">
+                <div class="text-center md:text-left">
+                    <span class="text-lg font-bold text-white block">Anyili Liseth Quintero Quintero</span>
+                    <span class="text-xs text-slate-500 font-medium tracking-wide block mt-1">Asistente Administrativo Integral • Desarrolladora Frontend en Crecimiento</span>
+                </div>
+                <div class="flex gap-4 justify-center">
+                    <a href="#inicio" class="text-xs font-semibold uppercase hover:text-white transition-colors">Inicio</a>
+                    <a href="#perfil" class="text-xs font-semibold uppercase hover:text-white transition-colors">Sobre Mí</a>
+                    <a href="#habilidades" class="text-xs font-semibold uppercase hover:text-white transition-colors">Habilidades</a>
+                    <a href="#proyectos" class="text-xs font-semibold uppercase hover:text-white transition-colors">Proyectos</a>
+                    <a href="#educacion" class="text-xs font-semibold uppercase hover:text-white transition-colors">Educación</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-xs text-slate-500">
+                <span>&copy; 2026 Anyili Liseth Quintero Quintero. Todos los derechos reservados.</span>
+                <span class="flex items-center gap-1">
+                    Hecho con <i data-lucide="heart" class="w-3 h-3 text-red-500 fill-red-500"></i> y puro JavaScript
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GLOBAL SCRIPTS -->
+    <script>
+        // Init Icons
+        lucide.createIcons();
+
+        // Dark/Light Mode Switcher Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
+        
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        }
+
+        themeToggleBtn.addEventListener('click', toggleTheme);
+        themeToggleBtnMobile.addEventListener('click', toggleTheme);
+
+        // Set default theme from localStorage or system preference
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Mobile Menu toggling
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')){
+                menuIcon.setAttribute('data-lucide', 'menu');
+            } else {
+                menuIcon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        });
+
+        // Close mobile menu on clicking any navigation link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // Change Header background transition on scroll
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md', 'bg-white', 'dark:bg-slate-900');
+                header.classList.remove('bg-white/80', 'dark:bg-slate-900/80');
+            } else {
+                header.classList.remove('shadow-md', 'bg-white', 'dark:bg-slate-900');
+                header.classList.add('bg-white/80', 'dark:bg-slate-900/80');
+            }
+        });
+
+        // Habilidades filter function
+        function filterSkills(category) {
+            const cards = document.querySelectorAll('.skill-card');
+            const buttons = document.querySelectorAll('.skill-tab-btn');
+            
+            // Adjust button style
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white', 'active');
+                btn.classList.add('text-slate-600', 'dark:text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-slate-800');
+            });
+
+            // Set active style to target button
+            const currentBtn = Array.from(buttons).find(btn => {
+                if(category === 'all' && btn.textContent.trim() === 'Todas') return true;
+                if(category === 'tech' && btn.textContent.trim().includes('Tecnología')) return true;
+                if(category === 'office' && btn.textContent.trim().includes('Oficina')) return true;
+                if(category === 'soft' && btn.textContent.trim().includes('Blandas')) return true;
+                return false;
+            });
+
+            if (currentBtn) {
+                currentBtn.classList.remove('text-slate-600', 'dark:text-slate-400', 'hover:bg-slate-100', 'dark:hover:bg-slate-800');
+                currentBtn.classList.add('bg-brand-600', 'text-white', 'active');
+            }
+
+            // Hide/Show cards
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                    card.classList.add('animate-fade-in');
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Interactive Task Planner Mock
+        let defaultTasks = [
+            { id: 1, title: "Organizar correspondencia y archivo físico", category: "Archivo", priority: "Alta" },
+            { id: 2, title: "Hacer informe de conciliación de facturas", category: "Finanzas", priority: "Media" },
+            { id: 3, title: "Actualizar la tabla de contacto de proveedores en Excel", category: "Administración", priority: "Alta" },
+            { id: 4, title: "Revisar y corregir textos del sitio web de prueba", category: "Web/Soporte", priority: "Baja" }
+        ];
+
+        // Read Local Storage or set default
+        let currentTasks = JSON.parse(localStorage.getItem('agenda-tasks')) || defaultTasks;
+
+        function renderTasks() {
+            const container = document.getElementById('tasks-container');
+            const counter = document.getElementById('task-counter');
+            container.innerHTML = '';
+
+            counter.textContent = `${currentTasks.length} Tareas`;
+
+            if (currentTasks.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-8 text-slate-400">
+                        <i data-lucide="check-square" class="w-10 h-10 mx-auto mb-2 opacity-50"></i>
+                        <p class="text-sm font-semibold">¡Felicidades, todo organizado!</p>
+                        <p class="text-xs">No quedan tareas programadas para hoy.</p>
+                    </div>
+                `;
+                lucide.createIcons();
+                return;
+            }
+
+            currentTasks.forEach(task => {
+                let badgeColor = "bg-emerald-100 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400";
+                if (task.priority === "Alta") badgeColor = "bg-red-100 dark:bg-red-950/40 text-red-700 dark:text-red-400";
+                if (task.priority === "Media") badgeColor = "bg-amber-100 dark:bg-amber-950/40 text-amber-700 dark:text-amber-400";
+
+                let catBadge = "bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300";
+                if (task.category === "Web/Soporte") catBadge = "bg-brand-100 dark:bg-brand-950 text-brand-700 dark:text-brand-300";
+
+                const element = document.createElement('div');
+                element.className = "flex items-center justify-between p-3.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/50 dark:border-slate-800 shadow-sm hover:translate-x-1 transition-all";
+                element.innerHTML = `
+                    <div class="flex items-start gap-3">
+                        <div class="mt-1">
+                            <span class="inline-block w-2.5 h-2.5 rounded-full ${task.priority === 'Alta' ? 'bg-red-500' : task.priority === 'Media' ? 'bg-amber-500' : 'bg-emerald-500'}"></span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-slate-800 dark:text-slate-100 leading-tight">${task.title}</p>
+                            <div class="flex flex-wrap items-center gap-2 mt-1.5">
+                                <span class="px-2 py-0.5 text-[10px] rounded-md font-semibold ${badgeColor}">Prio: ${task.priority}</span>
+                                <span class="px-2 py-0.5 text-[10px] rounded-md font-semibold ${catBadge}">${task.category}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="deleteTask(${task.id})" class="p-1.5 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-950/20 text-slate-400 hover:text-rose-500 transition-colors" title="Completar / Eliminar">
+                        <i data-lucide="check" class="w-4 h-4"></i>
+                    </button>
+                `;
+                container.appendChild(element);
+            });
+
+            lucide.createIcons();
+        }
+
+        function addNewTask() {
+            const titleInput = document.getElementById('task-title');
+            const categorySelect = document.getElementById('task-category');
+            const priorityInput = document.querySelector('input[name="task-priority"]:checked');
+
+            if (!titleInput.value.trim()) {
+                showToast("Por favor", "Escribe un nombre para la tarea antes de agregar.", "warning");
+                return;
+            }
+
+            const newTask = {
+                id: Date.now(),
+                title: titleInput.value.trim(),
+                category: categorySelect.value,
+                priority: priorityInput ? priorityInput.value : "Media"
+            };
+
+            currentTasks.push(newTask);
+            localStorage.setItem('agenda-tasks', JSON.stringify(currentTasks));
+            titleInput.value = '';
+            renderTasks();
+            showToast("¡Agregada!", "Tarea administrativa guardada correctamente.", "success");
+        }
+
+        function deleteTask(id) {
+            currentTasks = currentTasks.filter(task => task.id !== id);
+            localStorage.setItem('agenda-tasks', JSON.stringify(currentTasks));
+            renderTasks();
+            showToast("¡Completada!", "Tarea removida o marcada como realizada.", "success");
+        }
+
+        // Mock download logic for agendas (.TXT Format simulator)
+        function downloadAgenda() {
+            if (currentTasks.length === 0) {
+                showToast("Sin Tareas", "No hay tareas cargadas para generar el reporte de agenda.", "warning");
+                return;
+            }
+
+            let fileContent = `========================================================\n`;
+            fileContent += `   REPORTE DE AGENDA DIARIA - ANYILI LISETH QUINTERO \n`;
+            fileContent += `   Generado de manera interactiva mediante Web Engine     \n`;
+            fileContent += `========================================================\n\n`;
+
+            currentTasks.forEach((task, index) => {
+                fileContent += `${index + 1}. [${task.priority}] - ${task.title} (Área: ${task.category})\n`;
+            });
+
+            fileContent += `\n========================================================\n`;
+            fileContent += `Contacto: anyili.quintero@hotmail.com | Colombia 2026\n`;
+
+            // Download trigger (execCommand fallback simulator / temporary anchor)
+            const blob = new Blob([fileContent], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Agenda_De_Oficina_AnyiliQuintero.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            showToast("Descarga Lista", "Tu reporte diario administrativo ha sido descargado.", "success");
+        }
+
+        // Custom elegant notification helper (Replacer for Alert)
+        function showToast(title, description, type) {
+            const modal = document.getElementById('toast-modal');
+            const mTitle = document.getElementById('modal-title');
+            const mDesc = document.getElementById('modal-description');
+            
+            mTitle.textContent = title;
+            mDesc.textContent = description;
+            
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('toast-modal').classList.add('hidden');
+        }
+
+        // Contact Form processing simulation
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const company = document.getElementById('form-company').value || "Empresa Particular";
+            const email = document.getElementById('form-email').value;
+            
+            showToast(
+                "¡Gracias por comunicarte!", 
+                `Hola ${name}, tu mensaje desde la empresa "${company}" ha sido simulado de manera perfecta. Anyili Liseth Quintero Quintero se contactará al correo "${email}" en el menor tiempo posible.`, 
+                "success"
+            );
+            
+            contactForm.reset();
+        });
+
+        // Initialize App loop
+        window.onload = function() {
+            renderTasks();
+        };
+    </script>
+</body>
+</html>
